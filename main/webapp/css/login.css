@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+h2 {
+	margin			: 0;
+	font			: 30px sans-serif;
+}
+
+form {
+	/* フォームをページの中央に置く */
+	margin			: 5em auto;
+	width			: 600px;
+	/* フォームの範囲の範囲が分かる様にする */
+	padding			: 1em;
+	border			: 1px	solid #ccc;
+	border-radius 	: 1em;
+}
+ul {
+	list-style		: none;	/* リストの黒丸を消す */
+	padding			: 0;
+	margin			: 0;
+}
+form li + li {
+	margin-top		: 1em;	/* リストの上下間隔を１文字分に設定 */
+}
+input {
+	font			: 1em sans-serif;
+	width			: 300px;
+	height			: 3em;
+	box-sizing		: border-box;
+	border			: 1px solid #999;
+	border-radius	: 5px;
+}
+input:focus {
+	border-color	: #000;
+}
+li {
+	text-align		: center;
+}
+button {
+	font			: 1em sans-serif;
+	width			: 300px;
+	height			: 3em;
+	border-radius	: 5px;
+}

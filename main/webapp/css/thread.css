@@ -1,0 +1,118 @@
+/********************************/
+/* スレッドメッセージ画面ＣＳＳ */
+/********************************/
+@charset "UTF-8";
+
+/************/
+/* 共通定義 */
+/************/
+h2 {	
+	margin			: 0.5em 10px 0.5em 10px;
+}
+ul {
+	list-style		: none;
+	margin			: 0;
+	padding			: 0;
+}
+.fix_body {
+	padding			: 100px 0 80px 0;
+}
+.box {
+	position		: fixed;
+	top				: 45px;
+	left			: 0px;
+	background		: white;
+}
+/******************/
+/* メッセージ一覧 */
+/******************/
+.message_list {
+	border			: 1px solid #666;
+	margin			: 1em auto 1em auto;
+	width			: auto;
+	border-radius	: 5px;
+}
+.message {
+	padding			: 5px 5px 5px 5px;
+	margin			: 0.5em 10px 0.5em 10px;
+	width			: auto;
+	background		: lightcyan;
+	border			: 1px solid paleturquoise;
+	border-radius	: 10px;
+}
+.name_time {
+	margin-bottom	: 1em; 
+}
+.line {
+	font			: 1em sans-serif;
+}
+/********************/
+/* レスポンスの投稿 */
+/********************/
+.new_message {
+	position		: fixed;
+	bottom			: 0;
+	left			: 0;
+	width			: 100%;
+	border			: 1px solid #666;
+	width			: 100%;
+	height			: 90px;
+	border-radius	: 5px;	
+	background		: white;
+}
+form {
+	display			: flex;
+}
+/*
+.response h2 {
+	margin			: 0.5em 0 0 0.5em;
+	border			: 1px solid #666;
+	text-align		: center;
+	width			: auto;
+	border-radius	: 5px;	
+}
+*/
+input {
+	font			: 1em sans-serif;
+	width			: 90%;
+	height			: 2em;
+	box-sizing		: border-box;
+	border			: 1px solid #666;
+	border-radius	: 5px;
+	background		: #ccc;
+	margin			: 1em 0 0 1em;
+}
+textarea {
+	font			: 1em sans-serif;
+	width			: 95%;
+	margin			: 1em 0 0 0;
+	height			: 3em;
+}
+button {
+	font			: 1em sans-serif;
+	margin			: 1em 1em 0 0;
+	width			: 90%;
+	height			: 2em;
+	border-radius	: 5px;	
+}
+
+/*
+.button {
+	text-align		: center;
+}
+.response {
+	 flex: 0 2 20%;
+}
+*/
+/*************************/
+/* flexboxで使用する定義 */
+/*************************/
+.username {
+	 flex: 1 2 20%;
+}
+.comment {
+	 flex: 1 1 60%;
+}
+.post_button {
+	 flex: 0 2 20%;
+}
