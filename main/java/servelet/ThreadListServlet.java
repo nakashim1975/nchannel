@@ -20,9 +20,9 @@ import model.ThreadLogic;
 import model.ThreadMessage;
 import model.User;
 
-/**
- * Servlet implementation class ThreadListServlet
- */
+/*------------------------------*/
+/*-- スレッド一覧画面での処理 --*/
+/*------------------------------*/
 @WebServlet("/ThreadListServlet")
 public class ThreadListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -32,14 +32,14 @@ public class ThreadListServlet extends HttpServlet {
 	/*--------------------------------------------*/
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ取得処理 --*/
 		/*------------------------*/
 		request.setCharacterEncoding("UTF-8");
 		int thread_id = Integer.parseInt(
-		        request.getParameter("threadid")); // スレッドＩＤ
+				request.getParameter("threadid")); // スレッドＩＤ
 
 		ThreadListLogic to = new ThreadListLogic();
 		String title = to.getTitle(thread_id); // タイトル
@@ -69,7 +69,7 @@ public class ThreadListServlet extends HttpServlet {
 		/*-- 画面遷移処理 --*/
 		/*------------------*/
 		RequestDispatcher rdp = request.getRequestDispatcher(
-		        "/WEB-INF/jsp/thread.jsp"); // スレッドメッセージ画面
+				"/WEB-INF/jsp/thread.jsp"); // スレッドメッセージ画面
 		rdp.forward(request, response);
 
 	}
@@ -79,7 +79,7 @@ public class ThreadListServlet extends HttpServlet {
 	/*----------------------------------------------*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ取得処理 --*/
@@ -111,7 +111,7 @@ public class ThreadListServlet extends HttpServlet {
 		/*-- 画面遷移処理 --*/
 		/*------------------*/
 		RequestDispatcher rdp = request.getRequestDispatcher(
-		        "/WEB-INF/jsp/threadList.jsp"); // スレッド一覧画面
+				"/WEB-INF/jsp/threadList.jsp"); // スレッド一覧画面
 		rdp.forward(request, response);
 
 	}

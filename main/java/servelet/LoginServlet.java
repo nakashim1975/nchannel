@@ -17,9 +17,9 @@ import model.ThreadList;
 import model.ThreadListLogic;
 import model.User;
 
-/**
- * Servlet implementation class LoginServlet
- */
+/*------------------------*/
+/*-- ログイン画面の処理 --*/
+/*------------------------*/
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 	/*------------------------*/
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------*/
 		/*-- 画面遷移処理 --*/
@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 	/*--------------------------------------------*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ取得処理 --*/

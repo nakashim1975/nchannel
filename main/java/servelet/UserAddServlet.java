@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import model.User;
 import model.UserLogic;
 
-/**
- * Servlet implementation class UserAddServlet
- */
+/*------------------------------*/
+/*-- ユーザー登録画面での処理 --*/
+/*------------------------------*/
 @WebServlet("/UserAddServlet")
 public class UserAddServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,7 +24,7 @@ public class UserAddServlet extends HttpServlet {
 	/*--------------------------------------------------------*/
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------*/
 		/*-- 画面遷移処理 --*/
@@ -39,7 +39,7 @@ public class UserAddServlet extends HttpServlet {
 	/*--------------------------------------------*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ取得処理 --*/
@@ -61,7 +61,7 @@ public class UserAddServlet extends HttpServlet {
 		if (user != null) {
 			request.setAttribute("user", user);
 			request.setAttribute("infoMsg", user.getName() + "さんは、<br>ユーザーＩＤ：" +
-			        user.getUser_id() + "で登録しました。");
+					user.getUser_id() + "で登録しました。");
 			request.setAttribute("kind", "2");
 		}
 

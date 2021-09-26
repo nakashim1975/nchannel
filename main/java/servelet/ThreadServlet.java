@@ -16,9 +16,9 @@ import model.MessageLogic;
 import model.ThreadMessage;
 import model.User;
 
-/**
- * Servlet implementation class ThreadServlet
- */
+/*----------------------------*/
+/*-- メッセージ画面での処理 --*/
+/*----------------------------*/
 @WebServlet("/ThreadServlet")
 public class ThreadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -28,7 +28,7 @@ public class ThreadServlet extends HttpServlet {
 	/*------------------------------------------------*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ取得処理 --*/
@@ -53,7 +53,7 @@ public class ThreadServlet extends HttpServlet {
 		/*------------------------*/
 		if (thMsgList != null) {
 			request.setAttribute(
-			        "thMsgList", thMsgList); // メッセージリスト
+					"thMsgList", thMsgList); // メッセージリスト
 			int maxMsgId = mo.getMaxMessageId(thMsgList); // 最大メッセージ番号を取得（新着メッセージのみボタンで使用）
 			ss.setAttribute("maxMsgId", maxMsgId); // 最大メッセージＩＤ
 		}
@@ -62,7 +62,7 @@ public class ThreadServlet extends HttpServlet {
 		/*-- 画面遷移処理 --*/
 		/*------------------*/
 		RequestDispatcher rdp = request.getRequestDispatcher(
-		        "/WEB-INF/jsp/thread.jsp"); // メッセージ一覧画面
+				"/WEB-INF/jsp/thread.jsp"); // メッセージ一覧画面
 		rdp.forward(request, response);
 
 	}

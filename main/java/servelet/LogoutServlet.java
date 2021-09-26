@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class LogoutServlet
- */
+/*--------------------*/
+/*-- ログアウト処理 --*/
+/*--------------------*/
 @WebServlet("/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
 	/*------------------------------------*/
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException {
+			throws ServletException, IOException {
 
 		/*------------------------*/
 		/*-- パラメータ削除処理 --*/
@@ -34,7 +34,7 @@ public class LogoutServlet extends HttpServlet {
 		/*-- 画面遷移処理 --*/
 		/*------------------*/
 		response.sendRedirect(
-		        "/nchannel/LoginServlet"); // ログイン画面
+				"/nchannel/LoginServlet"); // ログイン画面
 	}
 
 }
