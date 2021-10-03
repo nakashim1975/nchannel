@@ -24,7 +24,6 @@ public class MessageLogic {
 
 		MessageDAO dao = new MessageDAO();
 
-		// メッセージ登録
 		if (dao.Insert(msg)) {
 			List<ThreadMessage> thMsgList = dao.findByMessage(msg);
 
